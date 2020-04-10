@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.effect.Light.Distant?>
+<?import javafx.scene.effect.Lighting?>
+<?import javafx.scene.effect.Shadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.SignedOut">
+   <children>
+      <Pane layoutX="300.0" layoutY="200.0" prefHeight="600.0" prefWidth="800.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <ImageView blendMode="DARKEN" fitHeight="600.0" fitWidth="800.0" opacity="0.83" pickOnBounds="true" smooth="false">
+               <image>
+                  <Image url="@../Images/background-image.jpg" />
+               </image>
+            </ImageView>
+            <Text fill="#e89c1b" fontSmoothingType="LCD" layoutX="38.0" layoutY="411.0" strokeType="OUTSIDE" strokeWidth="0.0" text="We miss you already" textAlignment="CENTER" wrappingWidth="723.01416015625">
+               <font>
+                  <Font name="System Bold" size="64.0" />
+               </font>
+            </Text>
+            <Text layoutX="8.0" layoutY="580.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Digital Library Management System" />
+            <ImageView fitHeight="116.0" fitWidth="616.0" layoutX="248.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../Images/dlms-logo.png" />
+               </image>
+            </ImageView>
+            <Label layoutX="346.0" layoutY="396.0" text="☹☹" textFill="#f89a01">
+               <font>
+                  <Font size="96.0" />
+               </font>
+            </Label>
+            <Button fx:id="backToBeginBtn" layoutX="308.0" layoutY="517.0" mnemonicParsing="false" nodeOrientation="LEFT_TO_RIGHT" onAction="#backToBegin" prefHeight="41.0" prefWidth="185.0" text="Back to Welcome">
+               <font>
+                  <Font size="18.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+               <effect>
+                  <Lighting>
+                     <bumpInput>
+                        <Shadow />
+                     </bumpInput>
+                     <light>
+                        <Light.Distant />
+                     </light>
+                  </Lighting>
+               </effect>
+            </Button>
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>
