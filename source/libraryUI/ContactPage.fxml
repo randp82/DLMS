@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXDrawer?>
+<?import com.jfoenix.controls.JFXHamburger?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane fx:id="appPane" prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.ContactController">
+   <children>
+      <Pane prefHeight="125.0" prefWidth="800.0" style="-fx-border-color: #77421a; -fx-border-width: 7;" AnchorPane.bottomAnchor="475.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <ImageView fitHeight="111.0" fitWidth="283.0" layoutX="7.0" layoutY="7.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../Images/dlms-logo.png" />
+               </image>
+            </ImageView>
+            <Text layoutX="288.0" layoutY="-17.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Contact Us" textAlignment="CENTER" x="100.0" y="100.0">
+               <font>
+                  <Font name="System Bold Italic" size="59.0" />
+               </font>
+            </Text>
+         </children>
+      </Pane>
+      <Pane layoutY="123.0" prefHeight="475.0" prefWidth="800.0" style="-fx-background-color: #dbc7af; -fx-border-color: #77421a; -fx-border-width: 7;" AnchorPane.bottomAnchor="0.0" AnchorPane.topAnchor="125.0">
+         <children>
+            <Text layoutX="7.0" layoutY="465.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Digital Library Management System" />
+            <Text layoutX="164.0" layoutY="106.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Need help with Something?">
+               <font>
+                  <Font size="38.0" />
+               </font>
+            </Text>
+            <ImageView fitHeight="87.0" fitWidth="109.0" layoutX="121.0" layoutY="132.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../Images/mail.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="78.0" fitWidth="87.0" layoutX="126.0" layoutY="247.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../Images/call.png" />
+               </image>
+            </ImageView>
+            <JFXHamburger fx:id="navButton" layoutX="14.0" layoutY="14.0" prefHeight="26.0" prefWidth="26.0" />
+            <Pane fx:id="navBox" layoutX="7.0" layoutY="42.0" prefHeight="410.0" prefWidth="140.0">
+               <children>
+                  <JFXDrawer fx:id="navDrawer" cacheShape="false" defaultDrawerSize="140.0" overLayVisible="false" prefHeight="410.0" prefWidth="140.0" resizeContent="true" />
+               </children>
+            </Pane>
+            <Label fx:id="email" layoutX="296.0" layoutY="147.0" onMouseClicked="#sendMail" text="contactus@dlms.ca" textAlignment="CENTER">
+               <font>
+                  <Font size="32.0" />
+               </font>
+            </Label>
+            <Label fx:id="phone" layoutX="295.0" layoutY="264.0" text="+1(604)888-XXXX">
+               <font>
+                  <Font size="32.0" />
+               </font>
+            </Label>
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>

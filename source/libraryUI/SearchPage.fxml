@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXDrawer?>
+<?import com.jfoenix.controls.JFXHamburger?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.Glow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane fx:id="appPane" prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.SearchController">
+   <children>
+      <Pane prefHeight="125.0" prefWidth="800.0" style="-fx-border-color: #77421a; -fx-border-width: 7;" AnchorPane.bottomAnchor="475.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <ImageView fitHeight="111.0" fitWidth="283.0" layoutX="7.0" layoutY="7.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../Images/dlms-logo.png" />
+               </image>
+            </ImageView>
+            <Text layoutX="251.0" layoutY="-14.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Search Books" textAlignment="CENTER" x="100.0" y="100.0">
+               <font>
+                  <Font name="System Bold Italic" size="59.0" />
+               </font>
+            </Text>
+         </children>
+      </Pane>
+      <Pane layoutY="125.0" prefHeight="475.0" prefWidth="800.0" style="-fx-background-color: #dbc7af; -fx-border-color: #77421a; -fx-border-width: 7;" AnchorPane.bottomAnchor="0.0" AnchorPane.topAnchor="125.0">
+         <children>
+            <Text layoutX="7.0" layoutY="465.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Digital Library Management System" />
+            <TextField fx:id="searchTextFieldSP" alignment="CENTER" blendMode="DARKEN" centerShape="false" focusTraversable="false" layoutX="46.0" layoutY="45.0" prefHeight="67.0" prefWidth="570.0" promptText="Search" scaleShape="false" style="-fx-background-color: #ffffff; -fx-border-color: #000000; -fx-blend-mode: lighten;">
+               <font>
+                  <Font size="20.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="TEXT" />
+               </cursor>
+               <effect>
+                  <Glow />
+               </effect>
+            </TextField>
+            <Button fx:id="searchBtnSP" layoutX="634.0" layoutY="45.0" mnemonicParsing="false" onAction="#searchBook" prefHeight="67.0" prefWidth="126.0" text="Search">
+               <font>
+                  <Font size="18.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+            <ScrollPane layoutX="45.0" layoutY="133.0" prefHeight="280.0" prefWidth="715.0">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="450.0" prefWidth="700.0">
+                     <children>
+                        <TableView fx:id="bookTable" layoutX="6.0" layoutY="8.0" prefHeight="200.0" prefWidth="700.0" style="-fx-border-style: solid;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                          <columns>
+                            <TableColumn fx:id="titleColumn" editable="false" maxWidth="300.0" minWidth="200.0" prefWidth="200.0" resizable="false" text="Title" />
+                            <TableColumn fx:id="authorColumn" editable="false" maxWidth="175.0" minWidth="150.0" prefWidth="150.0" resizable="false" text="Author" />
+                            <TableColumn fx:id="publicationColumn" editable="false" maxWidth="200.0" minWidth="150.0" prefWidth="150.0" resizable="false" text="Publication" />
+                            <TableColumn fx:id="yearColumn" editable="false" maxWidth="125.0" minWidth="100.0" prefWidth="100.0" resizable="false" text="Year" />
+                          </columns>
+                        </TableView>
+                     </children></AnchorPane>
+              </content>
+            </ScrollPane>
+            <JFXHamburger fx:id="navButton" layoutX="14.0" layoutY="14.0" prefHeight="26.0" prefWidth="26.0" />
+            <Pane fx:id="navBox" layoutX="7.0" layoutY="42.0" prefHeight="410.0" prefWidth="140.0">
+               <children>
+                  <JFXDrawer fx:id="navDrawer" cacheShape="false" defaultDrawerSize="140.0" overLayVisible="false" prefHeight="410.0" prefWidth="140.0" resizeContent="true" />
+               </children>
+            </Pane>
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>

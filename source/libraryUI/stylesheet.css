@@ -1,0 +1,16 @@
+GridPane{
+	-fx-border-color: #000000;
+	-fx-background-color: #FFFFFF;
+	-fx-border-width: 5;
+	-fx-border-style: solid;
+	-fx-grid-lines-visible:true;
+	
+}
+
+Label{
+	-fx-font-size: 16pt;
+	-fx-font-style:italic;
+	-fx-font-weight: bold;
+	-fx-wrap-text:true;
+	-fx-label-padding: 0 0 0 10;
+}
